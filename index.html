@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 選單和動態看板範例</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item {
+            height: calc(100vh - 65px); /* 設定圖片高度為螢幕高度減去選單的高度 */
+        }
+        .carousel-item img {
+            height: 100%; /* 設定圖片高度為容器的100% */
+            object-fit: cover; /* 確保圖片不變形，裁切不需要的部分 */
+            width: 100%; /* 確保圖片寬度也為100% */
+        }
+    </style>
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">品牌名稱</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">產品介紹</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">產品特色</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">服務聯繫</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://www.japawalk.com/campaign/images/starry-sky/top_mv.jpg" class="d-block w-100" alt="看板1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEig-t5J-uJSjqW9GtLgRvZ1FHDp9-nkaXF6BD7CVmbGISXQUyZSPW3M5W44TJ8pYF2USJ3OCkbUiu05308Nbg0dnmHyue3bPCWVyYpMv1mM8aOLqPX8sZmdHRBS7l2jX_rL4yBtmOl-A2M/s1600/kristopher-roller-110203-unsplash-m.jpg" class="d-block w-100" alt="看板2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://img.activityjapan.com/wi/starry-sky-spot_thumb.jpg" class="d-block w-100" alt="看板3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">上一個</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">下一個</span>
+    </button>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center"> <!-- 確保整個 row 水平居中 -->
+        <div class="col-md-4">
+            <div class="card" style="width: 100%;">
+                <iframe src="https://www.youtube.com/embed/xcgrIlCBd9w?si=_gNted4p0NiWPQMh" 
+                        class="card-img-top" 
+                        style="height: 250px; width: 100%; border: none;" 
+                        allowfullscreen>
+                </iframe>
+                <div class="card-body">
+                    <h5 class="card-title">Card title 1</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card" style="width: 100%;">
+                <iframe src="https://www.youtube.com/embed/tJfZr2xFMbU?si=J00_HnpNum_XVgFN" 
+                        class="card-img-top" 
+                        style="height: 250px; width: 100%; border: none;" 
+                        allowfullscreen>
+                </iframe>
+                <div class="card-body">
+                    <h5 class="card-title">Card title 2</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 100%;">
+                <iframe src="https://www.youtube.com/embed/ezWxm00FmVw?si=SJi5EtVPQgIkndD_" 
+                        class="card-img-top" 
+                        style="height: 250px; width: 100%; border: none;" 
+                        allowfullscreen>
+                </iframe>                <div class="card-body">
+                    <h5 class="card-title">Card title 3</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4 justify-content-center"> <!-- 確保整個 row 水平居中 -->
+        <div class="col-md-4">
+            <div class="card" style="width: 100%;">
+                <iframe src="https://www.youtube.com/embed/Z7MfHKuzJYo?si=XbzGfZF3LUf4TvGV" 
+                        class="card-img-top" 
+                        style="height: 250px; width: 100%; border: none;" 
+                        allowfullscreen>
+                </iframe>                   
+                <div class="card-body">
+                    <h5 class="card-title">Card title 4</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 100%;">
+                <iframe src="https://www.youtube.com/embed/SxrNBRXZxPY?si=MzPbVMCSKbM2jOoF" 
+                        class="card-img-top" 
+                        style="height: 250px; width: 100%; border: none;" 
+                        allowfullscreen>
+                </iframe>                   
+                <div class="card-body">
+                    <h5 class="card-title">Card title 5</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 100%;">
+                <iframe src="https://www.youtube.com/embed/gq8nSxPyLDk?si=jom2ZTcfgOqJ41Iq" 
+                        class="card-img-top" 
+                        style="height: 250px; width: 100%; border: none;" 
+                        allowfullscreen>
+                </iframe>                   
+                <div class="card-body">
+                    <h5 class="card-title">Card title 6</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 引入 Bootstrap JS 和 Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
